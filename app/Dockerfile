@@ -2,7 +2,6 @@ FROM python:3.12-alpine
 
 WORKDIR /app
 
-# ДОДАТИ ЦЕ
 RUN apk add --no-cache curl
 
 RUN pip install --no-cache-dir flask

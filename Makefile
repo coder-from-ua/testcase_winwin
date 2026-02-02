@@ -15,5 +15,5 @@ test:
 	@echo
 	@echo "Flood test (expect some 429s):"
 	@for i in `seq 1 20`; do \
-		curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/; \
+		curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/healthz; \
 	done | sort | uniq -c
