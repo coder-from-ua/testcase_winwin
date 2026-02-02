@@ -7,14 +7,33 @@ Tiny web service running behind an nginx reverse proxy with rate limiting and re
 ## 1) Prerequisites
 
 Required:
-- Docker (20+)
-- Docker Compose v2 (`docker compose`)
+- Docker
+- Docker Compose v3+
 
 ---
 
-## 2) How to Run
+## 2) How to run service
 
 ```bash
-cp .env.example .env
-# edit ENV_NAME if desired
 make up
+
+---
+
+## 3) How to test service
+
+```bash
+make test
+
+---
+
+## 4) How to stop service
+
+```bash
+make down
+
+---
+
+## 4) How to log service
+
+```bash
+make logs
