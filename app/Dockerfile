@@ -1,0 +1,14 @@
+FROM python:3.12-alpine
+
+WORKDIR /app
+
+# ДОДАТИ ЦЕ
+RUN apk add --no-cache curl
+
+RUN pip install --no-cache-dir flask
+
+COPY app.py .
+
+EXPOSE 8000
+
+CMD ["python", "app.py"]
